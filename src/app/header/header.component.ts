@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { ButtonComponent } from '../shared/button/button.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   template: `
       <header>
         <div id="logo">
@@ -18,13 +19,9 @@ import { Component } from '@angular/core';
               <a href="/">Management</a>
             </li>
             <li>
-              <button>
-                <span>
-                  Logout
-                </span>
-                <span class="icon">
-                  →
-                </span>
+              <button appButton>
+                <span ngProjectAs="text">Logout</span>
+                <span class="icon" ngProjectAs="icon">→</span>
               </button>
             </li>
           </ul>
