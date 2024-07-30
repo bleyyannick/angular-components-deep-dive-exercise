@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'p[controls]',
+  selector: 'app-controls',
   standalone: true,
   imports: [],
   template: ` 
-          <ng-content select="label"></ng-content>
-          <ng-content />
+         <p>
+            <label>{{ label()}}</label>
+            <ng-content select='input, textarea' />
+         </p>
   `,
   styleUrl: './controls.component.css'
 })
 export class ControlsComponent {
+  
+  label = input.required<string>();
 
 }

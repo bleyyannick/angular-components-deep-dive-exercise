@@ -8,20 +8,18 @@ import { ControlsComponent } from '../../../shared/controls/controls.component';
   imports: [ButtonComponent, ControlsComponent],
   template: `
       <form>
-        <p controls>
-          <label ngProjectAs="label">Title</label>
+        <app-controls label="Title">
           <input name="title" id="title" />
-        </p>
-        <p controls>
-          <label ngProjectAs="input">Request</label>
+       </app-controls>
+        <app-controls label="Request">
           <textarea name="request" id="request" rows="3"></textarea>
-        </p>
-        <p>
+       </app-controls>
+       <p>
           <button appButton>
             <span ngProjectAs="text">Submit</span>
             <span class="icon" ngProjectAs="icon">⌲</span>
           </button>
-        </p>
+      </p>      
       </form>
   `,
   styleUrl: './new-ticket.component.css'
