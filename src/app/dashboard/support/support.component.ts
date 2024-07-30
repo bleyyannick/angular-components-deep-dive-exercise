@@ -6,10 +6,10 @@ import { NewTicketComponent } from "./new-ticket/new-ticket.component";
   standalone: true,
   imports: [NewTicketComponent],
   template:`
-            <div id="status">
-              <p>Todo...</p>
+            <div id="new-ticket">
+              <app-new-ticket />
             </div>
-            <app-new-ticket />
+            
   `,
   styleUrl: './support.component.css'
 })

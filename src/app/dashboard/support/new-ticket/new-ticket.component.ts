@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { ButtonComponent } from '../../../shared/button/button.component';
 
 @Component({
   selector: 'app-new-ticket',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   template: `
       <form>
         <p>
@@ -15,13 +16,9 @@ import { Component } from '@angular/core';
           <textarea name="request" id="request" rows="3"></textarea>
         </p>
         <p>
-          <button>
-            <span>
-              Submit
-            </span>
-            <span class="icon">
-              ⌲
-            </span>
+          <button appButton>
+            <span ngProjectAs="text">Submit</span>
+            <span class="icon" ngProjectAs="icon">⌲</span>
           </button>
         </p>
       </form>
