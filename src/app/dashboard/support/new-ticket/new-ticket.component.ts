@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../../shared/button/button.component';
+import { ControlsComponent } from '../../../shared/controls/controls.component';
 
 @Component({
   selector: 'app-new-ticket',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, ControlsComponent],
   template: `
       <form>
-        <p>
-          <label>Title</label>
+        <p controls>
+          <label ngProjectAs="label">Title</label>
           <input name="title" id="title" />
         </p>
-        <p>
-          <label>Request</label>
+        <p controls>
+          <label ngProjectAs="input">Request</label>
           <textarea name="request" id="request" rows="3"></textarea>
         </p>
         <p>
