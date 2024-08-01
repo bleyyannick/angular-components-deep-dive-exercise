@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-controls',
@@ -10,6 +10,11 @@ import { Component, input } from '@angular/core';
             <ng-content select='input, textarea' />
          </p>
   `,
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    class: 'control'
+  },
+
   styleUrl: './controls.component.css'
 })
 export class ControlsComponent {
