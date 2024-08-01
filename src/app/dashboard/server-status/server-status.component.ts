@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template:`
-        <div>
+        <div id="status">
           @if (currentStatus === 'online') {
           <p>Servers are online</p>
           <p>All systems are operational.</p>
