@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, viewChild, ViewEncapsulation } from '@angular/core';
 import { NewTicketComponent } from "./new-ticket/new-ticket.component";
 
 @Component({
@@ -6,11 +6,12 @@ import { NewTicketComponent } from "./new-ticket/new-ticket.component";
   standalone: true,
   imports: [NewTicketComponent],
   template:`
-            <div id="new-ticket">
               <app-new-ticket />
-            </div>
             
   `,
+  host: {
+    id: 'new-ticket'
+  },
   styleUrl: './support.component.css'
 })
 export class SupportComponent {

@@ -12,7 +12,7 @@ import { Component, input, ViewEncapsulation } from '@angular/core';
   `,
   encapsulation: ViewEncapsulation.None,
   host: {
-    class: 'control'
+    class:'control'
   },
 
   styleUrl: './controls.component.css'

@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template:`
-        <div id="status">
           @if (currentStatus === 'online') {
           <p>Servers are online</p>
           <p>All systems are operational.</p>
@@ -16,8 +15,10 @@ import { Component } from '@angular/core';
           <p>Server status is unknown</p>
           <p>Fetching server status failed.</p>
           }
-        </div>
   `,
+  host: {
+    id: 'status'
+  }, 
   styleUrl: './server-status.component.css'
 })
 export class ServerStatusComponent {
